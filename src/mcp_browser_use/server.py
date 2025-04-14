@@ -187,7 +187,7 @@ def main() -> None:
     Handles server start and final resource cleanup.
     """
     try:
-        app.run()
+        app.run(transport='sse')
     except Exception as e:
         logger.error("Error running MCP server: %s\n%s", e, traceback.format_exc())
     finally:
